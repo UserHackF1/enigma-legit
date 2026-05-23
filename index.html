@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enigma_Legit | Официальный сайт</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background: radial-gradient(circle at 30% 10%, #0a0a1a, #010105);
+            font-family: 'Impact', 'Arial Black', 'Segoe UI Black', sans-serif;
+            min-height: 100vh;
+            color: white;
+        }
+        .scanline {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, transparent 0%, rgba(0,255,255,0.03) 50%, transparent 100%);
+            pointer-events: none;
+            animation: scan 8s linear infinite;
+            z-index: 10;
+        }
+        @keyframes scan {
+            0% { transform: translateY(-100%); }
+            100% { transform: translateY(100%); }
+        }
+        .noise {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMDAiIGhlaWdodD0iMzAwIj48ZmlsdGVyIGlkPSJmIj48ZmVUdXJidWxlbmNlIHR5cGU9ImZyYWN0YWxOb2lzZSIgYmFzZUZyZXF1ZW5jeT0iLjciIG51bU9jdGF2ZXM9IjMiLz48L2ZpbHRlcj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWx0ZXI9InVybCgjZikiIG9wYWNpdHk9IjAuMDgiLz48L3N2Zz4=');
+            pointer-events: none;
+            opacity: 0.1;
+            z-index: 5;
+        }
+        .container {
+            position: relative;
+            z-index: 20;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 50px 20px;
+            text-align: center;
+        }
+        h1 {
+            font-size: 90px;
+            letter-spacing: 8px;
+            background: linear-gradient(135deg, #00ffcc, #00aaff, #0066ff);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: 0 0 40px rgba(0,170,255,0.4);
+            margin-bottom: 20px;
+        }
+        .sub {
+            font-size: 24px;
+            color: #ccffff;
+            letter-spacing: 4px;
+            border-top: 1px solid #00ccff;
+            border-bottom: 1px solid #00ccff;
+            padding: 12px 35px;
+            display: inline-block;
+            margin-bottom: 50px;
+        }
+        .features {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 50px;
+        }
+        .feature-box {
+            background: rgba(0,20,30,0.75);
+            border-left: 3px solid #00ccff;
+            padding: 20px 30px;
+            min-width: 160px;
+            backdrop-filter: blur(4px);
+            border-radius: 0 8px 8px 0;
+        }
+        .feature-box span {
+            color: #00ddff;
+            font-size: 22px;
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+        .feature-box small {
+            color: #88aaff;
+            font-size: 13px;
+            font-family: monospace;
+        }
+        .desc {
+            max-width: 800px;
+            margin: 0 auto 40px;
+            background: rgba(0,0,0,0.6);
+            padding: 25px;
+            border-radius: 12px;
+            border: 1px solid #00ccff33;
+        }
+        .desc p {
+            color: #bbddff;
+            font-family: 'Segoe UI', monospace;
+            font-size: 16px;
+            margin: 10px 0;
+        }
+        .download-area {
+            margin: 40px 0;
+        }
+        .download-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #00aa55, #006633);
+            padding: 20px 60px;
+            font-size: 32px;
+            font-weight: bold;
+            font-family: 'Impact', 'Arial Black', sans-serif;
+            color: white;
+            text-decoration: none;
+            border-radius: 60px;
+            box-shadow: 0 0 30px rgba(0,255,100,0.5);
+            transition: 0.2s;
+            border: none;
+            cursor: pointer;
+        }
+        .download-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 45px rgba(0,255,100,0.8);
+        }
+        .limit-text {
+            color: #ffaa44;
+            font-family: monospace;
+            font-size: 18px;
+            font-weight: bold;
+            text-shadow: 0 0 5px #ff6600;
+            margin-top: 20px;
+        }
+        .exe-text {
+            color: #ff3366;
+            font-family: monospace;
+            font-size: 20px;
+            font-weight: bold;
+            background: rgba(0,0,0,0.7);
+            display: inline-block;
+            padding: 10px 30px;
+            border-radius: 40px;
+            border: 1px solid #ff3366;
+            margin-top: 20px;
+        }
+        .countdown {
+            margin-top: 40px;
+            color: #00ccff;
+            font-family: monospace;
+            font-size: 14px;
+        }
+        .footer {
+            margin-top: 60px;
+            padding-top: 20px;
+            border-top: 1px solid #00ccff33;
+            font-family: monospace;
+            color: #00ccff;
+            font-size: 13px;
+            opacity: 0.7;
+        }
+        .glitch-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: repeating-linear-gradient(0deg, rgba(0,200,255,0.04) 0px, rgba(0,200,255,0.04) 1px, transparent 1px, transparent 4px);
+            pointer-events: none;
+            z-index: 15;
+        }
+        @media (max-width: 768px) {
+            h1 { font-size: 45px; }
+            .download-btn { font-size: 22px; padding: 15px 35px; }
+            .feature-box { padding: 12px 20px; min-width: 130px; }
+            .feature-box span { font-size: 16px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="noise"></div>
+    <div class="scanline"></div>
+    <div class="glitch-overlay"></div>
+    <div class="container">
+        <h1>ENIGMA_LEGIT</h1>
+        <div class="sub">CS2 · PRIVATE · UNDETECTED</div>
+        
+        <div class="features">
+            <div class="feature-box"><span>SILENT AIM</span><small>humanized + smooth</small></div>
+            <div class="feature-box"><span>VISUAL ESP</span><small>box · line · health</small></div>
+            <div class="feature-box"><span>TRIGGER BOT</span><small>adjustable delay</small></div>
+            <div class="feature-box"><span>RAGE MODE</span><small>100% HS rate</small></div>
+            <div class="feature-box"><span>NO RECOIL</span><small>full control</small></div>
+            <div class="feature-box"><span>BUNNY HOP</span><small>auto strafe</small></div>
+        </div>
+        
+        <div class="desc">
+            <p>| Enigma_Legit — полностью функциональный приватный чит для CS2 |</p>
+            <p>| ядерный драйвер · обход DMA · отсутствие VAC волн с 2024 |</p>
+            <p>| поддержка 24/7 · еженедельные обновления · приватная сборка |</p>
+        </div>
+        
+        <div class="download-area">
+            <a href="https://workupload.com/file/rVFuGk4a7Bd" class="download-btn" target="_blank">▼ СКАЧАТЬ ENIGMA_LEGIT</a>
+            <div class="limit-text">⚠ Всего можно скачать 1000 раз! Скачай быстрее! ⚠</div>
+            <div class="exe-text">⚡ Запускаете Exloder.exe! ⚡</div>
+        </div>
+        
+        <div class="countdown">
+            [ Следующее обновление: через 6 дней 14 часов ]
+        </div>
+        
+        <div class="footer">
+            > private build · whitelist only · lifetime key<br>
+            > © 2025 Enigma_Legit Team. All rights reserved.
+        </div>
+    </div>
+</body>
+</html>
